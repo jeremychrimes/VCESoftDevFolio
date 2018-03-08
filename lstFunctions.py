@@ -10,16 +10,30 @@ functions should be seperated by two lines.
 """
 
 
-def lstSum(lst): # A function to get the sum of a list
-    fltSum = float()
+def lstSum(lst):  # A function to get the sum of a list
+    intSum = int()
     for i in lst:
-        fltSum = fltSum + i
-    return fltSum
+        intSum = intSum + i
+    return intSum
 
 
-def lstAvg(lst): # A function to return the average of a list. DEPENDS UPON lstAvg!!
-    return float(lstSum(lst)/len(lst))
+def lstAvg(lst):  # A function to return the average of a list. DEPENDS UPON lstAvg!!
+    return int(lstSum(lst)/len(lst)) # divide the sum of the list by the
 
+
+def lstMax(lst):  # A function to determine the maximum value in a list.
+    intMaxVal = int(lst[0])
+    for i in lst:
+        if i > intMaxVal:
+            intMaxVal = i
+    return intMaxVal
+
+
+def lstLinearFind(item, lst):
+    for index, content in enumerate(lst): ## Get the list item and key until the list ends.
+        # print("{0}:{1}".format(index,item))#Debug to test list is being enumerated properly
+        if content == item:
+            return index
 
 def lstMin(lst): # A function to determine the minimum value in a list
     fltMinVal = float(lst[0])
@@ -29,9 +43,3 @@ def lstMin(lst): # A function to determine the minimum value in a list
     return fltMinVal
 
 
-def lstMax(lst): # A function to determine the maximum value in a list.
-    fltMaxVal = float(lst[0])
-    for i in lst:
-        if i > fltMaxVal:
-            fltMaxVal = i
-    return fltMaxVal
