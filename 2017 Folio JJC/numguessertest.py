@@ -1,4 +1,4 @@
-# Jeremy Chrimes <jeremy.chrimes@gmail.com>
+## Jezz Chrimes <jjchr2@schools.vic.edu.au>
 # Last modified: 2017/08/13
 # Version: 0.1
 

@@ -1,3 +1,4 @@
+## Jezz Chrimes <jjchr2@schools.vic.edu.au>
 from hashlib import md5 ## Importing the library to hash the users password input as md5.
 from time import sleep 
 password = "dc647eb65e6711e155375218212b3964" ##Setting the password the computer wants.

@@ -1,3 +1,3 @@
-# © Jeremy Chrimes 2017 
+## Jezz Chrimes <jjchr2@schools.vic.edu.au>
 # Print out HelloWorld! in the terminal window
 print("HelloWorld!")

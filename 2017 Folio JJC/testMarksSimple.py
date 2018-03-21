@@ -1,5 +1,5 @@
 # Exam Percentage Generator
-# Jeremy Chrimes 2017
+## Jezz Chrimes <jjchr2@schools.vic.edu.au>
 # This function checks a interger value to make sure that it is valid
 
 # This function uses an if else if statement to work out what a persons grade is based upon their percentage. Note it will not work if the percentage is over 100%.

@@ -1,4 +1,4 @@
-## Jeremy Chrimes <jeremy.chrimes@gmail.com>
+## Jezz Chrimes <jjchr2@schools.vic.edu.au>
 ## Speelling test practice 0.1
 ## This script will alow users to practice a spelling test. The wordlist must be in the form of an array and can be loaded from a text (txt) file.
 
