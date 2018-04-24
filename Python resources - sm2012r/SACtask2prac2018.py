@@ -3,6 +3,7 @@ from tkinter import *
 
 #set up basic tk GUI size and background color
 root = Tk()
+root.configure(background="lime green")
 root.resizable(0,0)
 root.title("list of friends age's")
 
@@ -17,16 +18,34 @@ arrOutputAge=[]
 def Output_Display():
     
     intAge=(entAge.get())
-
-    intOutputAges = (entAge.get())
-
     intAge=int(intAge)
+    funcAgeArray(intAge)
+    funcAgeListDisplay(intAge)
+    funcAvgcalculator(intAge)
+    funcHighestAge()
+    funcLowestAge()
+def Output_Display_Event(event): 
+    Output_Display()
+
+def funcErrorhandling():
+    print("empty function")
+
+def funcAgeArray(newAge):
+    print("empty function")
+    arrAges.append(newAge)
 
 
+def funcAgeListDisplay(newAge):
+    print("empty function")
+    intOutputAges = (entAge.get())
     arrOutputAge.append(intOutputAges)
     word = " ".join(arrOutputAge)
+    intOutputAgesLbl.configure(text=word)
+    
 
-    arrAges.append(intAge)
+def funcAvgcalculator(newAge):
+    print("empty function")
+    arrAges.append(newAge)
 
     total=sum(arrAges)
 
@@ -34,30 +53,24 @@ def Output_Display():
 
     av = total/length
     av = ('%.2f' % av)
-
-    Average_lbl.configure(text = av)
     numAgeLbl.configure(text = length)
-    intOutputAgesLbl.configure(text=word)
-
-
-def funcErrorhandling():
-    print("empty function")
-
-def funcAgeArray():
-    print("empty function")
-
-
-def funcAgeListDisplay():
-    print("empty function")
-
-def funcAvgcalculator():
-    print("empty function")
+    Average_lbl.configure(text = av)
 
 def funcHighestAge():
     print("empty function")
+    intMaxVal = int(arrAges[0])
+    for i in arrAges:
+        if (i > intMaxVal):
+            intMaxVal = i
+    high_lbl.configure(text="High: {}".format(intMaxVal))
 
 def funcLowestAge():
     print("empty function")
+    intMinVal = int(arrAges[0])
+    for i in arrAges:
+        if (i < intMinVal):
+            intMinVal = i
+    low_lbl.configure(text="Low: {}".format(intMinVal))
 
 #GUI Widgets for tkinter
 
@@ -76,6 +89,7 @@ bw.grid(row=2, column=1, sticky=SW, padx=45, pady=10)
 
 #text box to enter runs per game
 entAge=Entry(root, width=4,  )
+entAge.bind('<Return>', Output_Display_Event)
 entAge.grid(row=3, column=0, sticky=E, padx=45)
 
 #button for submitting runs per game
@@ -93,14 +107,20 @@ w.grid(row=5, column=0, sticky=E, padx=45)
 
 Average_Age=Label(root, text="Average Age", font=('Arial', 16) )
 Average_Age.grid(row=5, column=1, sticky=W, padx=0)
-
+ 
 intOutputAgesLbl=Label(root, text="", font=('Arial', 14) )
 intOutputAgesLbl.grid(row=6, column=0, sticky=E, padx=45)
 
 Average_lbl=Label(root, text="23.45", font=('Arial', 14) )
 Average_lbl.grid(row=6, column=1, sticky=NW)
 
-bw=Label(root, text="")
-bw.grid(row=7, column=1, sticky=SW, padx=45, pady=1)
+low_lbl = Label(root, text='Low: 0', font=("Arial",14))
+low_lbl.grid(row=7, column=0, sticky=SW, padx=5, pady=5)
+
+high_lbl = Label(root, text='High: 0', font=("Arial",14))
+high_lbl.grid(row=7, column=1, sticky=SE, padx=5, pady=5)
+
+
+
 
 root.mainloop()
