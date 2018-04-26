@@ -2,22 +2,22 @@ from tkinter import *
 
 
 #set up basic tk GUI size and background color
-root = Tk()
-root.configure(background="lime green")
-root.resizable(0,0)
-root.title("list of friends age's")
+root = Tk() # Initialise the window
+root.configure(background="lime green") # Set the background colour to be lime green
+root.resizable(0,0) # Set the window to be non resizable 
+root.title("list of friends age's") # Set the title of the window to be list of friends
 
 
 
 #arrAgess
-arrAges=[]
-arrOutputAge=[]
+arrAges=[] # Create an array of ages
+arrOutputAge=[] # Create an array of output ages 
 
 
 
 def Output_Display():
     
-    intAge=(entAge.get())
+    intAge=(entAge.get()) 
     intAge=int(intAge)
     funcAgeArray(intAge)
     funcAgeListDisplay(intAge)
@@ -26,38 +26,39 @@ def Output_Display():
     funcLowestAge()
 def Output_Display_Event(event): 
     Output_Display()
+    
 
 def funcErrorhandling():
-    print("empty function")
+    #print("empty function")
 
 def funcAgeArray(newAge):
-    print("empty function")
+    #print("empty function")
     arrAges.append(newAge)
 
 
 def funcAgeListDisplay(newAge):
-    print("empty function")
-    intOutputAges = (entAge.get())
+    # print("empty function")
+    intOutputAges = (entAge.get()) # 
     arrOutputAge.append(intOutputAges)
     word = " ".join(arrOutputAge)
     intOutputAgesLbl.configure(text=word)
     
 
 def funcAvgcalculator(newAge):
-    print("empty function")
-    arrAges.append(newAge)
+    #print("empty function")
+    #arrAges.append(newAge) 
 
-    total=sum(arrAges)
+    total=sum(arrAges) # Get a sum of the array
 
-    length=len(arrAges)
+    length=len(arrAges) # Get the length of the array
 
-    av = total/length
-    av = ('%.2f' % av)
-    numAgeLbl.configure(text = length)
-    Average_lbl.configure(text = av)
+    av = total/length # calculate the mean by using total over lenght
+    av = ('%.2f' % av) # Set the average to use only 2 decimal places
+    numAgeLbl.configure(text = length) # Set the length label
+    Average_lbl.configure(text = av) # Set the average label
 
 def funcHighestAge():
-    print("empty function")
+    #print("empty function")
     intMaxVal = int(arrAges[0])
     for i in arrAges:
         if (i > intMaxVal):
@@ -65,7 +66,7 @@ def funcHighestAge():
     high_lbl.configure(text="High: {}".format(intMaxVal))
 
 def funcLowestAge():
-    print("empty function")
+    #print("empty function")
     intMinVal = int(arrAges[0])
     for i in arrAges:
         if (i < intMinVal):
