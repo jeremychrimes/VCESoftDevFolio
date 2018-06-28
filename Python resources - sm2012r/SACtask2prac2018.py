@@ -26,16 +26,15 @@ def Output_Display():
     funcLowestAge()
 def Output_Display_Event(event): 
     Output_Display()
-    
 
 def funcErrorhandling():
-    #print("empty function")
+    print("empty function")
 
 def funcAgeArray(newAge):
     #print("empty function")
     arrAges.append(newAge)
 
-
+    
 def funcAgeListDisplay(newAge):
     # print("empty function")
     intOutputAges = (entAge.get()) # 
