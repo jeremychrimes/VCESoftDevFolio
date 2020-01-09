@@ -1,3 +1,3 @@
-## Jezz Chrimes <jjchr2@schools.vic.edu.au>
+## Jeremy Chrimes <jeremy.chrimes@gmail.com>
 # Print out HelloWorld! in the terminal window
 print("HelloWorld!")
