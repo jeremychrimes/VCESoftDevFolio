@@ -1,4 +1,4 @@
-## Jezz Chrimes
+# Jeremy Chrimes <jeremy.chrimes@gmail.com>
 ## HelloWorld asking your name and saying hello!
 
 ## Creating a variable called name and asking what the users name is. 
